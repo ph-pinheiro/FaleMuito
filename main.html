@@ -15,6 +15,7 @@
         <link rel="shortcut icon" href="images/favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/topmenu-style.css" />
+        <link rel="stylesheet" type="text/css" href="css/form-autorizar.css" />
 
         <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 
@@ -89,23 +90,39 @@
                 <section id="left">
 
                     <h1>Autorizador</h1>
-                    <form action="" method="POST" class="form-horizontal" 
+                    <form action="" id="form-autorizar" method="POST" class="form-horizontal" 
                      ng-submit="addFaleMuito()">
                         
                         <p>
                             <label for="name-field">
-                                Pessoa Autorizada 
-                                <input id="name-field" ng-model="name" required />
+                                <input type="text"  
+                                    id="field-name" 
+                                    placeholder="Pessoa Autorizada" 
+                                    autocomplete="off" 
+                                    tabindex="1" 
+                                    class="txtinput"
+                                    ng-model="name"
+                                    required
+                                />
+                                <!-- <input id="name-field" ng-model="name" required /> -->
                             </label>
                         </p>    
                         <p>     
                             <label for="number-field">
-                                Número Autorizado
-                                <input id="number-field" ng-model="number" required />
+                                <input type="text"  
+                                    id="field-number" 
+                                    placeholder="Número de Telefone" 
+                                    autocomplete="off" 
+                                    tabindex="1" 
+                                    class="txtinput"
+                                    ng-model="number"
+                                    required
+                                />
+                                <!-- <input id="number-field" ng-model="number" required /> -->
                             </label>
                         </p>
                         <div class="buttons">
-                            <input type="submit" class="btn btn-sm btn-primary" 
+                            <input type="submit" id="submitbtn" class="btn btn-sm btn-primary" 
                              value="Adicionar" />
                         </div>
                     </form>
@@ -115,7 +132,7 @@
             
                 <section id="right" class="list">
                 
-                    <h2>Lista de Autorizados</h2>
+                    <h1>Lista de Autorizados</h1>
                     <table>
                         <tfoot>
                             <tr id="cabecalho-total">
