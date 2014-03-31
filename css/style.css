@@ -35,6 +35,12 @@ a {
 	text-decoration: none;
 }
 
+body h1{
+	font-size: 2.0em;
+	color: #08ad31;
+	margin-bottom: 25px;
+}
+
 .container {
 	width: 100%;
 	position: relative;
@@ -168,6 +174,14 @@ section#right {
     padding: 10px;
 }
 
+section#all{
+
+}
+
+#lista-autorizados{
+	width: 100%;
+}
+
 .cop{
 	text-align: center;
 }
@@ -179,7 +193,7 @@ section#right {
 }
 
 #table-nome, #table-numero{
-	width: 30%;
+	width: 35%;
 }
 
  
@@ -201,10 +215,4 @@ html[xmlns] .clearfix {
 }
 * html .clearfix {
 	height: 1%;
-}
-
-h1{
-	font-size: 2.0em;
-	color: #08ad31;
-	margin-bottom: 25px;
 }

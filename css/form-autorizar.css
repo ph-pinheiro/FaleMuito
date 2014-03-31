@@ -38,6 +38,11 @@
 #form-autorizar input#field-number {
 	background: #fff url('../images/phone.png') 5px 4px no-repeat;
 }
+
+#form-autorizar .buttons{
+	margin-top: 15px;
+}
+
 #submitbtn{
 	display: block;  
 	float: left;  

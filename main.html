@@ -121,6 +121,15 @@
                                 <!-- <input id="number-field" ng-model="number" required /> -->
                             </label>
                         </p>
+                        <p>     
+                            <label for="number-field">
+                                <input type="checkbox"  
+                                    id="field-isAutorizador" 
+                                    value="isAutorizador"
+                                />
+                                Este usuário pode autorizar outros números
+                            </label>
+                        </p>
                         <div class="buttons">
                             <input type="submit" id="submitbtn" class="btn btn-sm btn-primary" 
                              value="Adicionar" />
@@ -133,13 +142,7 @@
                 <section id="right" class="list">
                 
                     <h1>Lista de Autorizados</h1>
-                    <table>
-                        <tfoot>
-                            <tr id="cabecalho-total">
-                                <td>Total de Autorizados</td>
-                                <td ng-bind="total()"></td>
-                            </tr>
-                        </tfoot>
+                    <table id="lista-autorizados">
                         <tbody>
                             <tr id="cabecalho">
                                 <td id="table-nome">NOME</td>
@@ -153,8 +156,13 @@
                                 <td>Apagar</td>
                             </tr>
                         </tbody>
+                        <tfoot>
+                            <tr id="cabecalho-total">
+                                <td>Total de Autorizados</td>
+                                <td ng-bind="total()"></td>
+                            </tr>
+                        </tfoot>
                     </table>
-            
                 </section>
        
             </div>
