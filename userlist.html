@@ -35,7 +35,7 @@
             	
                     <ul class="top-menu">
                         <li>
-                            <a href="#">
+                            <a href="main.html">
                                 <span class="item-icon">&#43;</span>
                                 <div class="item-content">
                                     <h2 class="item-main">Autorizar</h2>
@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="userlist.html">
+                            <a href="#">
                                 <span class="item-icon">&#110;</span>
                                 <div class="item-content">
                                     <h2 class="item-main">Autorizados</h2>
@@ -87,85 +87,11 @@
         
             <div id="core" class="clearfix" ng-controller="FaleMuitoController">
             
-                <section id="left">
-
-                    <h1>Autorizador</h1>
-                    <form action="" id="form-autorizar" method="POST" class="form-horizontal" 
-                     ng-submit="addFaleMuito()">
-                        
-                        <p>
-                            <label for="name-field">
-                                <input type="text"  
-                                    id="field-name" 
-                                    placeholder="Pessoa Autorizada" 
-                                    autocomplete="off" 
-                                    tabindex="1" 
-                                    class="txtinput"
-                                    ng-model="name"
-                                    required
-                                />
-                                <!-- <input id="name-field" ng-model="name" required /> -->
-                            </label>
-                        </p>    
-                        <p>     
-                            <label for="number-field">
-                                <input type="text"  
-                                    id="field-number" 
-                                    placeholder="Número de Telefone" 
-                                    autocomplete="off" 
-                                    tabindex="1" 
-                                    class="txtinput"
-                                    ng-model="number"
-                                    required
-                                />
-                                <!-- <input id="number-field" ng-model="number" required /> -->
-                            </label>
-                        </p>
-                        <p>     
-                            <label for="number-field">
-                                <input type="checkbox"  
-                                    id="field-isAutorizador" 
-                                    value="isAutorizador"
-                                />
-                                Este usuário pode autorizar outros números
-                            </label>
-                        </p>
-                        <div class="buttons">
-                            <input type="submit" id="submitbtn" class="btn btn-sm btn-primary" 
-                             value="Adicionar" />
-                        </div>
-                    </form>
-    
-            
-                </section>
-            
-                <section id="right" class="list">
+                <section id="all">
                 
                     <h1>Lista de Autorizados</h1>
-                    <table id="lista-autorizados">
-                        <tbody>
-                            <tr id="cabecalho">
-                                <td id="table-nome">NOME</td>
-                                <td id="table-numero">CELULAR</td>
-                                <td colspan="2">AÇÕES</td>
-                            </tr>
-                            <tr ng-repeat="faleMuito in list">
-                                <td>{{faleMuito.name}}</td>
-                                <td>{{faleMuito.number}}</td>
-                                <td>Editar</td>
-                                <td>Apagar</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr id="cabecalho-total">
-                                <td>Total de Autorizados</td>
-                                <td ng-bind="total()"></td>
-                            </tr>
-                        </tfoot>
-                    </table>
+            
                 </section>
-       
-            </div>
         
             <footer>
             
