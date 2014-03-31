@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" ng-app="FaleMuitoAPP">
+
+    <head>
+        
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Custom Controller for FaleMuito! free calls." />
+        <meta name="keywords" content="css3, calls, cellphone, mobile, html5" />
+        <meta name="author" content="phpinheiro" />
+
+        <title>FaleMuito! Controller</title>
+
+        <link rel="shortcut icon" href="images/favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/topmenu-style.css" />
+
+        <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+
+    </head>
+
+    <body>
+    
+        <div id="wrapper">
+    	
+            <header>
+                
+                <div class="logo">
+
+                </div>
+            
+                <nav>
+            	
+                    <ul class="top-menu">
+                        <li>
+                            <a href="#">
+                                <span class="item-icon">&#43;</span>
+                                <div class="item-content">
+                                    <h2 class="item-main">Autorizar</h2>
+                                    <h3 class="item-sub">Liberar celular para ligações</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item-icon">&#110;</span>
+                                <div class="item-content">
+                                    <h2 class="item-main">Autorizados</h2>
+                                    <h3 class="item-sub">Visualizar números liberados</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item-icon">&#80;</span>
+                                <div class="item-content">
+                                    <h2 class="item-main">Histórico</h2>
+                                    <h3 class="item-sub">Visualizar chamadas realizadas</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item-icon">&#83;</span>
+                                <div class="item-content">
+                                    <h2 class="item-main">Configurações</h2>
+                                    <h3 class="item-sub">Alterar definições do sistema</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item-icon">&#39;</span>
+                                <div class="item-content">
+                                    <h2 class="item-main">Logout</h2>
+                                    <h3 class="item-sub">Sair do sistema</h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+            
+                </nav>
+        
+            </header>
+        
+            <div id="core" class="clearfix" ng-controller="FaleMuitoController">
+            
+                <section id="left">
+
+                    <h1>Autorizador</h1>
+                    <form action="" method="POST" class="form-horizontal" 
+                     ng-submit="addFaleMuito()">
+                        
+                        <p>
+                            <label for="name-field">
+                                Pessoa Autorizada 
+                                <input id="name-field" ng-model="name" required />
+                            </label>
+                        </p>    
+                        <p>     
+                            <label for="number-field">
+                                Número Autorizado
+                                <input id="number-field" ng-model="number" required />
+                            </label>
+                        </p>
+                        <div class="buttons">
+                            <input type="submit" class="btn btn-sm btn-primary" 
+                             value="Adicionar" />
+                        </div>
+                    </form>
+    
+            
+                </section>
+            
+                <section id="right" class="list">
+                
+                    <h2>Lista de Autorizados</h2>
+                    <table>
+                        <tfoot>
+                            <tr id="cabecalho-total">
+                                <td>Total de Autorizados</td>
+                                <td ng-bind="total()"></td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr id="cabecalho">
+                                <td id="table-nome">NOME</td>
+                                <td id="table-numero">CELULAR</td>
+                                <td colspan="2">AÇÕES</td>
+                            </tr>
+                            <tr ng-repeat="faleMuito in list">
+                                <td>{{faleMuito.name}}</td>
+                                <td>{{faleMuito.number}}</td>
+                                <td>Editar</td>
+                                <td>Apagar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                </section>
+       
+            </div>
+        
+            <footer>
+            
+                <div class="cop">Copyright 2014 © doht Soluções Tecnológicas. Todos os direitos reservados.</div>
+        
+            </footer>
+    
+        </div>
+
+    </body>
+
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/FaleMuitoAPP.js"></script>
+<script src="js/controllers/FaleMuitoController.js"></script>
+
+</html>

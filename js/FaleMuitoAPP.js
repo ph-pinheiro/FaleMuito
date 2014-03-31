@@ -1,0 +1,1 @@
+var FaleMuitoAPP = angular.module('FaleMuitoAPP', []);
