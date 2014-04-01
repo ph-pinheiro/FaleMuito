@@ -364,3 +364,77 @@ html[xmlns] .clearfix {
 	background-image: linear-gradient(to bottom, #f57d7d, #db4444);
 	text-decoration: none;
 }
+
+/*HISTÓRICO*/
+#historico{
+	width: 100%;
+}
+
+#historico #header{
+	display: block;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+#historico #header #col-nome{
+	float: left;
+	width: 30%;
+	margin: 5px 0px 5px 0px;
+}
+
+#historico #header #col-data{
+	float: left;
+	width: 15%;
+	margin: 5px 0px 5px 0px;
+}
+
+#historico #header #col-numorigem{
+	float: left;
+	width: 20%;
+	margin: 5px 0px 5px 0px;
+}
+
+#historico #header #col-numdestino{
+	float: left;
+	width: 20%;
+	margin: 5px 0px 5px 0px;
+}
+
+#historico #header #col-duracao{
+	float: left;
+	width: 15%;
+	margin: 5px 0px 5px 0px;
+}
+
+#historico #item .col-nome,
+#historico #item .col-data,
+#historico #item .col-numorigem,
+#historico #item .col-numdestino,
+#historico #item .col-duracao{
+	padding: 5px;
+}
+
+#historico #item .col-nome{
+	float: left;
+	width: 30%;
+}
+
+#historico #item .col-data{
+	float: left;
+	width: 15%;
+}
+
+#historico #item .col-numorigem{
+	float: left;
+	width: 20%;
+}
+
+#historico #item .col-numdestino{
+	float: left;
+	width: 20%;
+}
+
+#historico #item .col-duracao{
+	float: left;
+	width: 15%;
+}
